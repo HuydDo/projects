@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href='./style.css' type='text/css' />
+</header>
+
+<body>
+ 
+  <div class=title>Calculator</div>
+  <table border="1">
+    <tr>
+      <td><input type="button" value="c" onclick="clr()" /> </td>
+      <td colspan="3"><input type="text" id="ele" /></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="+" onclick="cal('+')" /> </td>
+      <td><input type="button" value="1" onclick="cal('1')" /> </td>
+      <td><input type="button" value="2" onclick="cal('2')" /> </td>
+      <td><input type="button" value="3" onclick="cal('3')" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="-" onclick="cal('-')" /> </td>
+      <td><input type="button" value="4" onclick="cal('4')" /> </td>
+      <td><input type="button" value="5" onclick="cal('5')" /> </td>
+      <td><input type="button" value="6" onclick="cal('6')" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="*" onclick="cal('*')" /> </td>
+      <td><input type="button" value="7" onclick="cal('7')" /> </td>
+      <td><input type="button" value="8" onclick="cal('8')" /> </td>
+      <td><input type="button" value="9" onclick="cal('9')" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="/" onclick="cal('/')" /> </td>
+      <td><input type="button" value="." onclick="cal('.')" /> </td>
+      <td><input type="button" value="0" onclick="cal('0')" /> </td>
+      <td><input type="button" value="=" onclick="solve()" /> </td>
+    </tr>
+  </table>
+
+   <h2>JavaScript Functions</h2>
+  <p>
+    Digital Clock
+  </p>
+  <p id="demo"></p>
+
+  
+
+<p>Below is a clock.</p>
+<p id="demo1"></p>
+<button onclick="clearInterval(myVar)">Stop time</button>
+<br>
+<p>Click the button above to stop the time.</p>
+
+  <h1>JavaScript Progress Bar</h1>
+   
+  <div id="myProgress">
+  <div id="myBar"></div>
+  </div>
+   
+  <br>
+  <button onclick="move()">Click Me</button>
+    
+ 
+   <button onclick="stopColor()">Stop Toggling Background Color</button>
+ 
+  
+  <script src="calculator.js"></script>
+  <script src="time.js"></script>
+  
+</body>
+
+</html>
