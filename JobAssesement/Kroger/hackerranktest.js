@@ -19,7 +19,7 @@ var fizzBuzz = function(n) {
 
 function getUniqueCharacter( s) {
   let counts = {}
-  
+  // build hash map : count how many times character is appeared
 	for(let i =0; i < s.length; i++){ 
 	 if (counts[s[i]]){
      counts[s[i]] += 1
@@ -27,7 +27,7 @@ function getUniqueCharacter( s) {
   	 counts[s[i]] = 1
 	 }
 	}  
-
+  // find the index plus 1
   for (let prop in counts){
 		if (counts[prop] == 1){
 			return s.indexOf(prop)+1 
@@ -37,22 +37,29 @@ function getUniqueCharacter( s) {
 }
 
 function funWithAnagrams(array){
+  //turn those words into arrays and sort them and turn them back into strings
+  // and compare them. If they are the same we will get rid of the j indexed word 
+  //and the function will continue to loop until i and j meet in the middle
   for(let i=0;i<array.length;i++){
     for(let j=array.length-1;j>i;j--){
       let sortedA = array[i].split("").sort().join("")
+      console.log(sortedA)
       let sortedB = array[j].split("").sort().join("")
+      console.log(sortedB)
       if(sortedA===sortedB){
+        console.log(j)
         array.splice(j,1)
+        console.log(array)
       }
     }
   }
   return array.sort()
 }
 
-fizzBuzz(15)
+// fizzBuzz(15)
 
-console.log(getUniqueCharacter('hackthegame'))  //3 = c
-console.log(getUniqueCharacter('falafal'))  //-1
+// console.log(getUniqueCharacter('hackthegame'))  //3 = c
+// console.log(getUniqueCharacter('falafal'))  //-1
 
 let str = ["code", "doce", "ecod", "framer", "frame"]
 console.log(funWithAnagrams(str))  //[ 'code', 'frame', 'framer' ]
